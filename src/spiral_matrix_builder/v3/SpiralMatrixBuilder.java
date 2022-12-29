@@ -1,4 +1,4 @@
-package spiral.matrix.builder.v3;
+package spiral_matrix_builder.v3;
 
 public class SpiralMatrixBuilder {
 

@@ -1,5 +1,4 @@
-package spiral.matrix.builder.v1;
-
+package spiral_matrix_builder.v1;
 class SpiralMatrixBuilder {
     private enum Direction {
         RIGHT(0, 1, "DOWN"),
@@ -22,12 +21,6 @@ class SpiralMatrixBuilder {
 
     private Direction actualDirection;
     private int x = 0, y = 0;
-
-    private void init() {
-        actualDirection = Direction.RIGHT;
-        x = 0;
-        y = 0;
-    }
 
     int[][] buildMatrixOfSize(int size) {
         if (size < 1) throw new IllegalArgumentException();
@@ -54,6 +47,12 @@ class SpiralMatrixBuilder {
         }
         matrix[x][y] = counter;
         return matrix;
+    }
+
+    private void init() {
+        actualDirection = Direction.RIGHT;
+        x = 0;
+        y = 0;
     }
 
     private void goNext() {
