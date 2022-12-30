@@ -1,7 +1,6 @@
 package binary_search_tree;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -48,7 +47,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     List<T> getAsSortedList() {
-        final List<T> list = new LinkedList<>();
+        final List<T> list = new ArrayList<>(tree.size());
         final TreeVisitBehavior<T> visitBehavior = new TreeVisitBehavior<>(
             TreeTraversal.INORDER,
             node -> list.add(node.value),
