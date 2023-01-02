@@ -39,6 +39,7 @@ public class LongestSequenceForkJoinRecursiveTask<T> extends RecursiveTask<Resul
     }
 
     private Result computeSequentially(final T value) {
+        final int length = end - start;
         int leftSequenceLength = 0, maxRep = 0, rightSequenceLength = 0;
         int repCounter = 0;
 
@@ -56,7 +57,7 @@ public class LongestSequenceForkJoinRecursiveTask<T> extends RecursiveTask<Resul
 
         if (i >= end) {
             maxRep = leftSequenceLength = rightSequenceLength = repCounter;
-            return new Result(leftSequenceLength, maxRep, rightSequenceLength);
+            return new Result(leftSequenceLength, maxRep, rightSequenceLength, maxRep == length);
         }
 
         repCounter = 0;
@@ -71,7 +72,7 @@ public class LongestSequenceForkJoinRecursiveTask<T> extends RecursiveTask<Resul
         }
         rightSequenceLength = repCounter;
 
-        return new Result(leftSequenceLength, maxRep, rightSequenceLength);
+        return new Result(leftSequenceLength, maxRep, rightSequenceLength, maxRep == length);
     }
 
     private Result combine(final Result leftResult, final Result rightResult) {
@@ -82,6 +83,14 @@ public class LongestSequenceForkJoinRecursiveTask<T> extends RecursiveTask<Resul
             ),
             rightResult.longerLength()
         );
-        return new Result(0, longerLength, 0);
+        final boolean isTheWholeString = leftResult.isTheWholeString() && rightResult.isTheWholeString();
+        final int leftFirstSequenceLengthPlusRightLastSequenceLength =
+            leftResult.firstSequenceLength() + rightResult.lastSequenceLength();
+        return new Result(
+            isTheWholeString ? leftFirstSequenceLengthPlusRightLastSequenceLength : leftResult.firstSequenceLength(),
+            longerLength,
+            isTheWholeString ? leftFirstSequenceLengthPlusRightLastSequenceLength : rightResult.lastSequenceLength(),
+            isTheWholeString
+        );
     }
 }
