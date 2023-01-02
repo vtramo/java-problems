@@ -11,3 +11,7 @@ You have to worry about the challenging possibility that the longest sequence wa
 and that you split it when dividing the problem into two halves. 
 
 Source: [ForkJoin Framework Exercises www.carleton.edu/computer-science/](https://www.cs.carleton.edu/faculty/dmusican/cs348/forkjoin/#orgd088b8d)
+
+Two solutions using different approaches have been implemented that solve this problem:
+- Using the fork/join framework explicitly
+- With parallel stream

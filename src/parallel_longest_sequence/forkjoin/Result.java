@@ -4,6 +4,6 @@ public record Result(
     int firstSequenceLength,
     int longerLength,
     int lastSequenceLength,
-    boolean isTheWholeString
+    boolean isTheWholeSequence
 ) {
 }

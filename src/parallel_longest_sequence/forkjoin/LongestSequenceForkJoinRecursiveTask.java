@@ -83,14 +83,12 @@ public class LongestSequenceForkJoinRecursiveTask<T> extends RecursiveTask<Resul
             ),
             rightResult.longerLength()
         );
-        final boolean isTheWholeString = leftResult.isTheWholeString() && rightResult.isTheWholeString();
-        final int leftFirstSequenceLengthPlusRightLastSequenceLength =
-            leftResult.firstSequenceLength() + rightResult.lastSequenceLength();
+        final boolean isTheWholeSequence = leftResult.isTheWholeSequence() && rightResult.isTheWholeSequence();
         return new Result(
-            isTheWholeString ? leftFirstSequenceLengthPlusRightLastSequenceLength : leftResult.firstSequenceLength(),
+            isTheWholeSequence ? longerLength : leftResult.firstSequenceLength(),
             longerLength,
-            isTheWholeString ? leftFirstSequenceLengthPlusRightLastSequenceLength : rightResult.lastSequenceLength(),
-            isTheWholeString
+            isTheWholeSequence ? longerLength : rightResult.lastSequenceLength(),
+            isTheWholeSequence
         );
     }
 }
