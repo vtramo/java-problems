@@ -1,4 +1,4 @@
-package stream_forker;
+package stream_forker.solution;
 
 import java.util.Spliterator;
 import java.util.concurrent.BlockingQueue;
