@@ -13,8 +13,8 @@ constructor that accepts a `Stream<T>` and offers the following methods:
 - `Results getResults():` this method returns the results of the all
 operations. `Results` is an interface:
   ```
-  public static interface Results {
-    public <R> R get(Object key);
+  interface Results {
+    <R> R get(Object key);
   }
   ```
   This interface has a single abstract method `<R> R get(Object key)` which
