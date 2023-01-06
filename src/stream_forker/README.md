@@ -49,4 +49,4 @@ late-binding capability, together with `BlockingQueue`s and `Future`s.
 
 Sources: 
 - [Modern Java in Action - Manning](https://www.manning.com/books/modern-java-in-action)
-- [Forked Stream - Paul Sandoz at Oraclecom](https://mail.openjdk.org/pipermail/lambda-dev/2013-November/011516.html)
+- [Forked Stream - Paul Sandoz at Oracle.com](https://mail.openjdk.org/pipermail/lambda-dev/2013-November/011516.html)
