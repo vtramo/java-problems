@@ -47,4 +47,6 @@ onlyEven [2, 4, 6, 8, 10]
 It is possible to implement such features using `Spliterator` and its
 late-binding capability, together with `BlockingQueue`s and `Future`s.
 
-Source: [Modern Java in Action - Manning](https://www.manning.com/books/modern-java-in-action)
+Sources: 
+- [Modern Java in Action - Manning](https://www.manning.com/books/modern-java-in-action)
+- [Forked Stream - Paul Sandoz at Oraclecom](https://mail.openjdk.org/pipermail/lambda-dev/2013-November/011516.html)
