@@ -1,6 +1,6 @@
 # Java Problems
 
-In this repository you can find problems of any kind solved with Java
+In this repository you can find problems of any kind solved with Java.
 
 | Problem Name                                                                                                   | Difficulty |
 |----------------------------------------------------------------------------------------------------------------|------------|
@@ -8,3 +8,4 @@ In this repository you can find problems of any kind solved with Java
 | [Binary Search Tree](https://github.com/vtramo/java-problems/tree/master/src/binary_search_tree)               | Medium     |
 | [Parallel Longest Sequence](https://github.com/vtramo/java-problems/tree/master/src/parallel_longest_sequence) | Expert    |
 | [Stream Forker](https://github.com/vtramo/java-problems/tree/master/src/stream_forker)                         | Expert    |
+| [Fun List](https://github.com/vtramo/java-problems/tree/master/src/fun_list)                                   | Expert    |
