@@ -65,5 +65,5 @@ public static void main(String[] args) {
 ```
 
 Sources:
-- https://thomasahle.com/teaching/pcpp2019/Week_4/exercise.pdf
+- https://thomasahle.com/teaching/pcpp2019/Week_4/exercise.pdf (last accessed 15 Jan 2023)
 - Java Precisely, third edition - Example 154
