@@ -63,3 +63,7 @@ public static void main(String[] args) {
           list15 = list14.scan(Integer::sum); // 13 26 35 44 53 62 75 88
   }
 ```
+
+Sources:
+- https://thomasahle.com/teaching/pcpp2019/Week_4/exercise.pdf
+- Java Precisely, third edition - Example 154
